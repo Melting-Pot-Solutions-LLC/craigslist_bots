@@ -10,7 +10,8 @@ from craigslist import CraigslistGigs
 # locations = ['columbia', 'charleston', 'florencesc', 'greenville', 'hiltonhead', 'myrtlebeach']
 # locations = ['charleston', 'florencesc', 'greenville', 'hiltonhead', 'myrtlebeach']
 
-queries = ['website', 'development', 'developer', 'software', 'wordpress', 'freelance']
+#queries = ['website', 'development', 'developer', 'software', 'wordpress', 'freelance']
+queries = ['development', 'developer', 'software', 'wordpress', 'freelance']
 
 
 
@@ -109,7 +110,7 @@ for query in queries:
             #pause
             time.sleep(5)
     k = k + 1
-    print k + " out of 6 is done"
+    print str(k) + " out of 6 is done"
 
 
 f = open('todays_gigs_previous_ads.txt', 'w')
