@@ -10,30 +10,29 @@ from craigslist import CraigslistGigs
 # locations = ['columbia', 'charleston', 'florencesc', 'greenville', 'hiltonhead', 'myrtlebeach']
 # locations = ['charleston', 'florencesc', 'greenville', 'hiltonhead', 'myrtlebeach']
 
-# queries = ['website', 'development', 'developer', 'software', 'wordpress', 'freelance']
-queries = ['website']
+queries = ['website', 'development', 'developer', 'software', 'wordpress', 'freelance']
 
 
 
 yesterday_string = (date.today() - timedelta(1)).strftime('20%y-%m-%d')
 
 locations_us =  {
-                    'SC': ['columbia', 'charleston', 'florencesc', 'greenville', 'hiltonhead', 'myrtlebeach']
-                    # 'NC': ['asheville', 'boone', 'charlotte', 'eastnc', 'fayetteville', 'greensboro', 'hickory', 'onslow', 'outerbanks', 'raleigh', 'wilmington', 'winstonsalem'],
-                    # 'GA': ['albanyga', 'athensga', 'atlanta', 'augusta', 'brunswick', 'columbusga', 'macon', 'nwga', 'savannah', 'statesboro', 'valdosta'],
-                    # 'AL': ['auburn', 'bham', 'dothan', 'shoals', 'gadsden', 'huntsville', 'mobile', 'montgomery', 'tuscaloosa'],
-                    # 'TN': ['chattanooga', 'clarksville', 'cookeville', 'jacksontn', 'knoxville', 'memphis', 'nashville', 'tricities'],
-                    # 'FL': ['miami', 'daytona', 'keys', 'fortmyers', 'gainesville', 'cfl', 'jacksonville', 'lakeland', 'lakecity', 'ocala', 'okaloosa', 'orlando', 'panamacity', 'pensacola', 'sarasota', 'spacecoast', 'staugustine', 'tallahassee', 'tampa', 'treasure'],
-                    # 'MS': ['gulfport', 'hattiesburg', 'jackson', 'meridian', 'northmiss', 'natchez'],
-                    # 'LA': ['batonrouge', 'cenla', 'houma', 'lafayette', 'lakecharles', 'monroe', 'neworleans', 'shreveport'],
-                    # 'AR': ['fayar', 'fortsmith', 'jonesboro', 'littlerock', 'texarkana'],
-                    # 'TX': ['abilene', 'amarillo', 'austin', 'beaumont', 'brownsville', 'collegestation', 'corpuschristi', 'dallas', 'nacogdoches', 'delrio', 'elpaso', 'galveston', 'houston', 'killeen', 'laredo', 'lubbock', 'mcallen', 'odessa', 'sanangelo', 'sanantonio', 'sanmarcos', 'bigbend', 'texoma', 'easttexas', 'victoriatx', 'waco', 'wichitafalls'],
-                    # 'NM': ['albuquerque', 'clovis', 'farmington', 'lascruces', 'roswell', 'santafe'],
-                    # 'AR': ['flagstaff', 'mohave', 'phoenix', 'prescott', 'showlow', 'sierravista', 'tucson', 'yuma'],
-                    # 'CA': ['bakersfield', 'chico', 'fresno', 'goldcountry', 'hanford', 'humboldt', 'imperial', 'inlandempire', 'losangeles', 'mendocino', 'merced', 'modesto', 'monterey', 'orangecounty', 'palmsprings', 'redding', 'sacramento', 'sandiego', 'sfbay', 'slo', 'santabarbara', 'santamaria', 'siskiyou', 'stockton', 'susanville', 'ventura', 'visalia', 'yubasutter'],
-                    # 'NV': ['elko', 'lasvegas', 'reno'],
-                    # 'UT': ['logan', 'ogden', 'provo', 'saltlakecity', 'stgeorge'],
-                    # 'CO': ['boulder', 'cosprings', 'denver', 'eastco', 'fortcollins', 'rockies', 'pueblo', 'westslope'],
+                    'SC': ['columbia', 'charleston', 'florencesc', 'greenville', 'hiltonhead', 'myrtlebeach'],
+                    'NC': ['asheville', 'boone', 'charlotte', 'eastnc', 'fayetteville', 'greensboro', 'hickory', 'onslow', 'outerbanks', 'raleigh', 'wilmington', 'winstonsalem'],
+                    'GA': ['albanyga', 'athensga', 'atlanta', 'augusta', 'brunswick', 'columbusga', 'macon', 'nwga', 'savannah', 'statesboro', 'valdosta'],
+                    'AL': ['auburn', 'bham', 'dothan', 'shoals', 'gadsden', 'huntsville', 'mobile', 'montgomery', 'tuscaloosa'],
+                    'TN': ['chattanooga', 'clarksville', 'cookeville', 'jacksontn', 'knoxville', 'memphis', 'nashville', 'tricities'],
+                    'FL': ['miami', 'daytona', 'keys', 'fortmyers', 'gainesville', 'cfl', 'jacksonville', 'lakeland', 'lakecity', 'ocala', 'okaloosa', 'orlando', 'panamacity', 'pensacola', 'sarasota', 'spacecoast', 'staugustine', 'tallahassee', 'tampa', 'treasure'],
+                    'MS': ['gulfport', 'hattiesburg', 'jackson', 'meridian', 'northmiss', 'natchez'],
+                    'LA': ['batonrouge', 'cenla', 'houma', 'lafayette', 'lakecharles', 'monroe', 'neworleans', 'shreveport'],
+                    'AR': ['fayar', 'fortsmith', 'jonesboro', 'littlerock', 'texarkana'],
+                    'TX': ['abilene', 'amarillo', 'austin', 'beaumont', 'brownsville', 'collegestation', 'corpuschristi', 'dallas', 'nacogdoches', 'delrio', 'elpaso', 'galveston', 'houston', 'killeen', 'laredo', 'lubbock', 'mcallen', 'odessa', 'sanangelo', 'sanantonio', 'sanmarcos', 'bigbend', 'texoma', 'easttexas', 'victoriatx', 'waco', 'wichitafalls'],
+                    'NM': ['albuquerque', 'clovis', 'farmington', 'lascruces', 'roswell', 'santafe'],
+                    'AR': ['flagstaff', 'mohave', 'phoenix', 'prescott', 'showlow', 'sierravista', 'tucson', 'yuma'],
+                    'CA': ['bakersfield', 'chico', 'fresno', 'goldcountry', 'hanford', 'humboldt', 'imperial', 'inlandempire', 'losangeles', 'mendocino', 'merced', 'modesto', 'monterey', 'orangecounty', 'palmsprings', 'redding', 'sacramento', 'sandiego', 'sfbay', 'slo', 'santabarbara', 'santamaria', 'siskiyou', 'stockton', 'susanville', 'ventura', 'visalia', 'yubasutter'],
+                    'NV': ['elko', 'lasvegas', 'reno'],
+                    'UT': ['logan', 'ogden', 'provo', 'saltlakecity', 'stgeorge'],
+                    'CO': ['boulder', 'cosprings', 'denver', 'eastco', 'fortcollins', 'rockies', 'pueblo', 'westslope'],
                     # 'KS': ['lawrence', 'ksu', 'nwks', 'salina', 'seks', 'swks', 'topeka', 'wichita'],
                     # 'KY': ['bgky', 'eastky', 'lexington', 'louisville', 'owensboro', 'westky'],
                     # 'WV': ['charlestonwv', 'martinsburg', 'huntington', 'morgantown', 'wheeling', 'parkersburg', 'swv', 'wv'],
@@ -84,37 +83,35 @@ for query in queries:
         for j in locations_us[i]:
             cl_e = CraigslistGigs(site=j, filters={'query': query})
             for result in cl_e.get_results():
-                print result
-#                 if ((result['datetime'][:10] == yesterday_string) and (not (result['name'] in previous_ads))):
-#                     # print result
-#                     final_string = final_string + ("\n '"  + result['name'] + "' -> " + result['url']).encode('utf-8') + "\n"
-#                     previous_ads.append(result['name'])
+                if ((result['datetime'][:10] == yesterday_string) and (not (result['name'] in previous_ads))):
+                    # print result
+                    final_string = final_string + ("\n '"  + result['name'] + "' -> " + result['url']).encode('utf-8') + "\n"
+                    previous_ads.append(result['name'])
 
 
-#         # send an email if the string is not empty
-#         if (final_string != ""):
-#             fromaddr = "dml1002313@gmail.com"
-#             toaddr = "konstantinrubin@engineer.com"
-#             msg = MIMEMultipart()
-#             msg['From'] = fromaddr
-#             msg['To'] = toaddr
-#             msg['Subject'] = i + " '" + query + "': craigslist search results"
-#             body = final_string
-#             msg.attach(MIMEText(body, 'plain'))
-#             server = smtplib.SMTP('smtp.gmail.com', 587)
-#             server.starttls()
-#             server.login(fromaddr, "SteveNash70!SteveNash70!")
-#             text = msg.as_string()
-#             server.sendmail(fromaddr, toaddr, text)
-#             server.quit()
+        # send an email if the string is not empty
+        if (final_string != ""):
+            fromaddr = "dml1002313@gmail.com"
+            toaddr = "konstantinrubin@engineer.com"
+            msg = MIMEMultipart()
+            msg['From'] = fromaddr
+            msg['To'] = toaddr
+            msg['Subject'] = i + " '" + query + "': craigslist search results"
+            body = final_string
+            msg.attach(MIMEText(body, 'plain'))
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login(fromaddr, "SteveNash70!SteveNash70!")
+            text = msg.as_string()
+            server.sendmail(fromaddr, toaddr, text)
+            server.quit()
 
-#             #pause
-#             time.sleep(5)
-
-
-# f = open('todays_gigs_previous_ads.txt', 'w')
-# for i in previous_ads:
-#     f.write(i + "\n")
+            #pause
+            time.sleep(5)
+    k = k + 1
+    print k + " out of 6 is done"
 
 
-# print "DONE"
+f = open('todays_gigs_previous_ads.txt', 'w')
+for i in previous_ads:
+    f.write(i + "\n")
