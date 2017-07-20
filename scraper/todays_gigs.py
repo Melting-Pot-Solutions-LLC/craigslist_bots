@@ -7,11 +7,14 @@ from email.MIMEText import MIMEText
 
 from craigslist import CraigslistGigs
 
+import random
+
 # locations = ['columbia', 'charleston', 'florencesc', 'greenville', 'hiltonhead', 'myrtlebeach']
 # locations = ['charleston', 'florencesc', 'greenville', 'hiltonhead', 'myrtlebeach']
 
 #queries = ['website', 'development', 'developer', 'software', 'wordpress', 'freelance']
-queries = ['development', 'developer', 'software', 'wordpress', 'freelance']
+# queries = ['development', 'developer', 'software', 'wordpress', 'freelance']
+queries = ['website', 'wordpress', 'mobile app', 'freelance']
 
 
 
@@ -28,12 +31,12 @@ locations_us =  {
                     'LA': ['batonrouge', 'cenla', 'houma', 'lafayette', 'lakecharles', 'monroe', 'neworleans', 'shreveport'],
                     'AR': ['fayar', 'fortsmith', 'jonesboro', 'littlerock', 'texarkana'],
                     'TX': ['abilene', 'amarillo', 'austin', 'beaumont', 'brownsville', 'collegestation', 'corpuschristi', 'dallas', 'nacogdoches', 'delrio', 'elpaso', 'galveston', 'houston', 'killeen', 'laredo', 'lubbock', 'mcallen', 'odessa', 'sanangelo', 'sanantonio', 'sanmarcos', 'bigbend', 'texoma', 'easttexas', 'victoriatx', 'waco', 'wichitafalls'],
-                    'NM': ['albuquerque', 'clovis', 'farmington', 'lascruces', 'roswell', 'santafe'],
-                    'AR': ['flagstaff', 'mohave', 'phoenix', 'prescott', 'showlow', 'sierravista', 'tucson', 'yuma'],
-                    'CA': ['bakersfield', 'chico', 'fresno', 'goldcountry', 'hanford', 'humboldt', 'imperial', 'inlandempire', 'losangeles', 'mendocino', 'merced', 'modesto', 'monterey', 'orangecounty', 'palmsprings', 'redding', 'sacramento', 'sandiego', 'sfbay', 'slo', 'santabarbara', 'santamaria', 'siskiyou', 'stockton', 'susanville', 'ventura', 'visalia', 'yubasutter'],
-                    'NV': ['elko', 'lasvegas', 'reno'],
-                    'UT': ['logan', 'ogden', 'provo', 'saltlakecity', 'stgeorge'],
-                    'CO': ['boulder', 'cosprings', 'denver', 'eastco', 'fortcollins', 'rockies', 'pueblo', 'westslope'],
+                    # 'NM': ['albuquerque', 'clovis', 'farmington', 'lascruces', 'roswell', 'santafe'],
+                    # 'AR': ['flagstaff', 'mohave', 'phoenix', 'prescott', 'showlow', 'sierravista', 'tucson', 'yuma'],
+                    # 'CA': ['bakersfield', 'chico', 'fresno', 'goldcountry', 'hanford', 'humboldt', 'imperial', 'inlandempire', 'losangeles', 'mendocino', 'merced', 'modesto', 'monterey', 'orangecounty', 'palmsprings', 'redding', 'sacramento', 'sandiego', 'sfbay', 'slo', 'santabarbara', 'santamaria', 'siskiyou', 'stockton', 'susanville', 'ventura', 'visalia', 'yubasutter'],
+                    # 'NV': ['elko', 'lasvegas', 'reno'],
+                    # 'UT': ['logan', 'ogden', 'provo', 'saltlakecity', 'stgeorge'],
+                    # 'CO': ['boulder', 'cosprings', 'denver', 'eastco', 'fortcollins', 'rockies', 'pueblo', 'westslope'],
                     # 'KS': ['lawrence', 'ksu', 'nwks', 'salina', 'seks', 'swks', 'topeka', 'wichita'],
                     # 'KY': ['bgky', 'eastky', 'lexington', 'louisville', 'owensboro', 'westky'],
                     # 'WV': ['charlestonwv', 'martinsburg', 'huntington', 'morgantown', 'wheeling', 'parkersburg', 'swv', 'wv'],
@@ -77,11 +80,14 @@ with open('todays_gigs_previous_ads.txt') as file:
 
 previous_ads = [x.strip() for x in previous_ads]
 
-k = 0
+
 for query in queries:
     for i in locations_us:
         final_string = ""
         for j in locations_us[i]:
+            #pause
+            time.sleep(random.randint(10, 20))
+
             cl_e = CraigslistGigs(site=j, filters={'query': query})
             for result in cl_e.get_results():
                 if ((result['datetime'][:10] == yesterday_string) and (not (result['name'] in previous_ads))):
@@ -107,12 +113,7 @@ for query in queries:
             server.sendmail(fromaddr, toaddr, text)
             server.quit()
 
-            #pause
-            time.sleep(5)
-    k = k + 1
-    print str(k) + " out of 6 is done"
-
 
 f = open('todays_gigs_previous_ads.txt', 'w')
 for i in previous_ads:
-    f.write(i + "\n")
+    f.write(i.encode('utf-8') + "\n")
