@@ -1,0 +1,55 @@
+<Location>chs<Location>
+<Title>BUILDING $99 CUSTOM WEBSITE <Title>
+<Type>service offered<Type>
+<Category>creative services<Category>
+<Email>info@meltingpotsolutions.co<Email>
+<Street>174 Meeting St<Street>
+<City>Charleston<City>
+<CrossStreet><CrossStreet>
+<State>SC<State>
+<Postal>29401<Postal>
+<Body>
+
+Hey CL,
+I am a professional mobile/web developer. I would like to build some websites for cheap and build my portfolio
+
+
+Some websites I developed:
+backersandhacker.com, www.meltingpotsolutions.co, steverubin.net
+
+I also developed a couple apps (you can find them on AppStore):
+pawprint, reach15, benair
+
+Please call me @ 803-369-0134
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Areas Served: charleston, columbia, florence, greenville / upstate, hilton head, myrtle beach 
+
+Related Keywords: webdesign, web design, website, web site, design, development, webdevelopment, wordpress, professional design, professional website development, Unique WordPress, eCommerce Website, Design Services
+
+
+<Body>
+<Price>80<Price>

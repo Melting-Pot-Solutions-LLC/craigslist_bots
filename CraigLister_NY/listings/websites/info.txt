@@ -1,0 +1,39 @@
+<Location>nyc<Location>
+<Title>CUSTOM STYLISH WEBSITE FOR $99 <Title>
+<Type>service offered<Type>
+<Category>creative services<Category>
+<Email>info@meltingpotsolutions.co<Email>
+<Street>32 W 39th St, <Street>
+<City>New York City<City>
+<CrossStreet><CrossStreet>
+<State>NY<State>
+<Postal>10018<Postal>
+<Body>
+
+Hello everyone,
+my name is Steve and I am professional web and mobile developer looking for some side projects. I do not work equity, I only work for money, 50% wil have to be prepaid, but 50% of $99 is very cheap. I know HTML5+CSS3, WordPress and other website builders. Please find samples of my work attached and below.
+
+steverubin.net, backersandhacker.com, www.meltingpotsolutions.co
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Areas Served: albany, binghamton, buffalo , catskills, chautauqua, elmira-corning, finger lakes, glens falls, hudson valley, ithaca, long island, new york city, oneonta, plattsburgh-adirondacks, potsdam-canton-massena, rochester, syracuse, twin tiers NY/PA, utica-rome-oneida, watertown
+
+Related Keywords: wordpress, weebly, wix, websites, wordpress, html, css, javascript, typescipt, java, website, web development, wordpress, web design, website builder, wix, website design, free website, web page, e-commerce website, website creator, web design company, website design
+
+<Body>
+<Price>80<Price>

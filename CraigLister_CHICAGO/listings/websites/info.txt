@@ -1,0 +1,50 @@
+<Location>sea<Location>
+<Title>WILL BUILD YOUR WEBSITE FOR $89 <Title>
+<Type>service offered<Type>
+<Category>creative services<Category>
+<Email>info@meltingpotsolutions.co<Email>
+<Street>2141 W North Ave<Street>
+<City>Chicago<City>
+<CrossStreet><CrossStreet>
+<State>IL<State>
+<Postal>60647<Postal>
+<Body>
+Hey guys,
+Call 803-369-0134 or go to our website www.meltingpotsolutions.co
+my name is Steve and a professional mobile/web developer with a couple of years of experience. I want to build up my portfolio and want to build a couple of beautiful websites for cheap. I will be willing to underprice them (as cheap as $89).
+
+Sample of my work:
+backersandhacker.com, www.meltingpotsolutions.co, steverubin.net
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Areas served: bloomington-normal, champaign urbana, chicago, decatur, la salle co, mattoon-charleston, peoria, rockford, southern illinois, springfield
+ 
+Related Keywords Web_Designer _Website_Design _Wordpress_Developer _Development_Seo
+
+
+<Body>
+<Price>80<Price>

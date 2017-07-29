@@ -1,0 +1,30 @@
+<Location>atl<Location>
+<Title>$99 CUSTOM WEBSITE<Title>
+<Type>service offered<Type>
+<Category>creative services<Category>
+<Email>info@meltingpotsolutions.co<Email>
+<Street>1447 Peachtree St<Street>
+<City>Atlanta<City>
+<CrossStreet><CrossStreet>
+<State>GA<State>
+<Postal>30309<Postal>
+<Body>
+Hello CL,
+my name is Steve I am professional mobile/web developer. I create HTML5+CSS3 websites as well as WordPress, Wix, Weebly, etc.
+
+Please text or call me at 803-369-0134.
+
+Please see my samples of work below.
+Websites:
+steverubin.net, backersandhacker.com, www.meltingpotsolutions.co
+
+I also developed a couple apps (you can find them on AppStore):
+pawprint, reach15, benair
+
+
+Areas served: albany, athens, atlanta, augusta, brunswick, columbus, macon / warner robins, northwest GA, savannah / hinesville, statesboro, valdosta
+
+Related keywords: website, web development, wordpress, web design, website builder, wix, website design, free website, web page, e-commerce website, website creator, web design company, website design
+
+<Body>
+<Price>80<Price>

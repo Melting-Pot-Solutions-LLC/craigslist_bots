@@ -1,0 +1,30 @@
+<Location>sea<Location>
+<Title>WILL BUILD A WEBSITE FOR YOU FOR $80<Title>
+<Type>service offered<Type>
+<Category>creative services<Category>
+<Email>info@meltingpotsolutions.co<Email>
+<Street> 220 2nd Ave St.<Street>
+<City>Seattle<City>
+<CrossStreet><CrossStreet>
+<State>WA<State>
+<Postal>98104<Postal>
+<Body>
+My name is Steve and a professional mobile/web developer with a couple of years of experience. I want to build up my portfolio and want to build a couple of beautiful websites for cheap. I will be willing to underprice them (as cheap as $80).
+Please see my samples of work below.
+
+Websites:
+backersandhacker.com, www.meltingpotsolutions.co, steverubin.net
+I also developed a couple of mobile apps (you can find them on AppStore):
+pawprint, reach15, benair
+
+I can also design a logo for your company.
+
+Please text or call 803-369-0134
+
+
+Areas Served: bellingham, kennewick-pasco-richland, moses lake, olympic peninsula, pullman / moscow, seattle-tacoma, skagit / island / SJI, spokane / coeur d'alene, wenatchee, yakima
+
+Related Keywords: wordpress, weebly, wix, websites, wordpress, html, css, javascript, typescipt, java, website, web development, wordpress, web design, website builder, wix, website design, free website, web page, e-commerce website, website creator, web design company, website design
+
+<Body>
+<Price>80<Price>

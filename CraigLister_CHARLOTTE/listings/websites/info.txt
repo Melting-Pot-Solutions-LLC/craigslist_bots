@@ -1,0 +1,34 @@
+<Location>cha<Location>
+<Title>WILL BUILD YOUR WEBSITE FOR $90 <Title>
+<Type>service offered<Type>
+<Category>creative services<Category>
+<Email>info@meltingpotsolutions.co<Email>
+<Street>933 Louise Ave<Street>
+<City>Charlotte<City>
+<CrossStreet><CrossStreet>
+<State>NC<State>
+<Postal>28204<Postal>
+<Body>
+
+Hey guys,
+I graduated from USC with a degree in CS and looking for some gigs to develop some custom websites. I want to build my portfolio and can charge you less than other developers do.
+
+Please see my samples of work below.
+Websites:
+backersandhacker.com, www.meltingpotsolutions.co, steverubin.net
+
+I also developed a couple apps (you can find them on AppStore):
+pawprint, reach15, benair
+
+
+
+
+
+Areas Served: charleston, columbia, florence, greenville / upstate, hilton head, myrtle beach
+
+Related Keywords: wordpress, weebly, wix, websites, wordpress, html, css, javascript, typescipt, java, website, web development, wordpress, web design, website builder, wix, website design, free website, web page, e-commerce website, website creator, web design company, website design
+
+
+
+<Body>
+<Price>80<Price>
