@@ -8,7 +8,7 @@ import os
 import shutil
 from inspect import getsourcefile
 from os.path import abspath
-from gmail import Gmail
+#from gmail import Gmail
 from datetime import date
 from PIL import Image
 
@@ -193,23 +193,23 @@ def acceptTermsAndConditions(listing,termsUrl):
     listing.driver.get("https" + termsUrl)
     clickAcceptTerms(listing)
 
-def acceptEmailTerms(listing):
-    gmail = Gmail()
-    gmail.login(gmailUser,gmailPass)
+# def acceptEmailTerms(listing):
+#     gmail = Gmail()
+#     gmail.login(gmailUser,gmailPass)
 
-    today = date.today()
-    year = today.year
-    month = today.month
-    day = today.day
+#     today = date.today()
+#     year = today.year
+#     month = today.month
+#     day = today.day
 
-    time.sleep(30)
-    print "Checking email"
-    emails = gmail.inbox().mail(sender="robot@craigslist.org",unread=True,after=datetime.date(year, month, day-1))
-    termsUrl = getFirstCraigslistEmailUrl(listing,emails)
-    acceptTermsAndConditions(listing,termsUrl)
+#     time.sleep(30)
+#     print "Checking email"
+#     emails = gmail.inbox().mail(sender="robot@craigslist.org",unread=True,after=datetime.date(year, month, day-1))
+#     termsUrl = getFirstCraigslistEmailUrl(listing,emails)
+#     acceptTermsAndConditions(listing,termsUrl)
 
-    gmail.logout()
-    print "Done Checking Email"
+#     gmail.logout()
+#     print "Done Checking Email"
 
 
 # --------------------------- Craigslist Posting Actions ---------------

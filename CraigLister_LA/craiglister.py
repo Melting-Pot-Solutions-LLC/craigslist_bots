@@ -8,7 +8,7 @@ import os
 import shutil
 from inspect import getsourcefile
 from os.path import abspath
-from gmail import Gmail
+# from gmail import Gmail
 from datetime import date
 from PIL import Image
 
@@ -20,6 +20,8 @@ gmailPass = "Bohm7Ahsh#"
 
 ClUSer = "Bohm7Ahsh@gmail.com"
 ClPass = "SteveNash70!"
+
+PROXY = "47.52.29.43:80" # IP:PORT or HOST:PORT
 
 #--------------------------------------- Importing Stuff ----------------------
 
@@ -190,23 +192,23 @@ def acceptTermsAndConditions(listing,termsUrl):
     listing.driver.get("https" + termsUrl)
     clickAcceptTerms(listing)
 
-def acceptEmailTerms(listing):
-    gmail = Gmail()
-    gmail.login(gmailUser,gmailPass)
+# def acceptEmailTerms(listing):
+#     gmail = Gmail()
+#     gmail.login(gmailUser,gmailPass)
 
-    today = date.today()
-    year = today.year
-    month = today.month
-    day = today.day
+#     today = date.today()
+#     year = today.year
+#     month = today.month
+#     day = today.day
 
-    time.sleep(30)
-    print "Checking email"
-    emails = gmail.inbox().mail(sender="robot@craigslist.org",unread=True,after=datetime.date(year, month, day-1))
-    termsUrl = getFirstCraigslistEmailUrl(listing,emails)
-    acceptTermsAndConditions(listing,termsUrl)
+#     time.sleep(30)
+#     print "Checking email"
+#     emails = gmail.inbox().mail(sender="robot@craigslist.org",unread=True,after=datetime.date(year, month, day-1))
+#     termsUrl = getFirstCraigslistEmailUrl(listing,emails)
+#     acceptTermsAndConditions(listing,termsUrl)
 
-    gmail.logout()
-    print "Done Checking Email"
+#     gmail.logout()
+#     print "Done Checking Email"
 
 
 # --------------------------- Craigslist Posting Actions ---------------
@@ -286,7 +288,11 @@ for listingFolder in listingFolders:
     with open(os.path.abspath(os.path.join(listingFolder, 'info.txt')), 'r') as info:
         listing = listingInfoParse(info.read())
     listing.images = getOrderedListingImages(listingFolder)
-    listing.driver = webdriver.Chrome(chromedriver)
+
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument('--proxy-server=%s' % PROXY)
+    listing.driver = webdriver.Chrome(chrome_options=chrome_options, executable_path=chromedriver)
+
     listing.driver.get("https://post.craigslist.org/c/" + listing.loc + "?lang=en")
     # listing.driver.get("https://post.craigslist.org/k/QC_O1sNI5xGmFzadSr67_A/qFRSb?s=type")
     postListing(listing)
